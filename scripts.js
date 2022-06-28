@@ -9,6 +9,14 @@ const upper = arr.map(array => {
 console.log(upper);
 
 
+function upperCase(array) { 
+    const upper = array.map(arr => {
+        return arr.toUpperCase();
+      });
+      return upper
+}
+console.log(upperCase(['eddah','karambu','gikunda']))
+
 
 
 
@@ -30,13 +38,16 @@ console.log(reverseString(string))
 // using the map method. In the end, add the kilometres up in a new variable
 // called "totalDistanceInKilometers" and return this variable.
 
- const meters = prompt ("Enter value in meters: ");
-  const factor = 0.001
-   const totalDistanceInKilometers = meters * factor
 
-console.log(totalDistanceInKilometers)
-   
-    console.log(`${meters} meters is equal to ${totalDistanceInKilometers} kilometers. `);
+function kilometer(array){
+    const factor =0.001
+    const totalDistanceInKilometers = array.map(arr =>{
+      return  factor*arr
+    })
+    return totalDistanceInKilometers
+    
+  }
+  console.log(kilometer([7000,6000,8000]))
 
 
 
@@ -64,7 +75,7 @@ console.log(totalDistanceInKilometers)
 function cleanNames(input) {
     return input.map(val => val.trim());
  }
- const names = [" Eddah ", " Karambu", "Gikunda"];
+
 console.log(cleanNames([" Eddah ", " Karambu", "Gikunda"]))
  
 
@@ -98,32 +109,17 @@ function emptyArray(array){
     
     console.log(emptyArray([2,3,4,5,6,7,8,9]))
 
-    // Write an array checkIfExists that accepts an array and a string and checks if
+    // Write a function checkIfExists that accepts an array and a string and checks if
     // that string is in the array. It should return false if the string is not in array
     // and true if the string is in array e.g
     // checkIfExists ([‘chair’, ‘door’, ‘table`], ‘door’) return true
-
-
-    const array = ['Eddah', 'karambu', 'gikunda'];
-
-if (array.includes('two')) {
-    return true
-  
-} else {
-  return false
-}
-
-
-
-function Array(arr){
-    const len = emptyArray.length
-        if(array.length.includes('')){
-           return true
-        } else {
+    function checkIfExists(array,str) {
+        if (array.includes(str)) {
+            return true
+        }else{
             return false
-        }  
-    }
-    console.log(Array([]))
+        }      
+    }   console.log(checkIfExists(['eddah','yui'],'yuiiii'))
 
 
 
@@ -132,12 +128,12 @@ function Array(arr){
     // value returns an array with the same number of items as given e.g
     // fill(4, ‘b’) returns [‘b’, ‘b’, ‘b’, ‘b’]
 
-    const checkOccurrence = (array, element) => {
-        let counter = 0;
-        array.forEach()for (let i = 0; i <= array.length; i++) {
-            if (array[i] == element) {
-                counter++;
-            }
-        }
-        console.log(counter);
-    };
+       
+    const checkOccurrence = (num, element) => { 
+        let number =[]
+          for(let i =0; i<num; i++){
+            number.push(element)
+          }
+        return number      
+  };
+      console.log(checkOccurrence(4,'eddah'))
