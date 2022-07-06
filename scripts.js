@@ -137,3 +137,28 @@ function emptyArray(array){
         return number      
   };
       console.log(checkOccurrence(4,'eddah'))
+
+// 6th July 2022
+      // 1. Write a JavaScript function to check whether an `input` is an array or not. 
+      // Test Data : 
+      // console.log(is_array('w3resource')); 
+      // console.log(is_array([1, 2, 4, 0])); 
+
+      const array = (input) =>{
+        if (toString.call(input) === "[object Array]")
+          return true;
+        return false;   
+          };
+      console.log(array('w3resource'));
+      console.log(array([1, 2, 4, 0]));
+      
+
+//       2. Write a JavaScript program to sort the items of an array. Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ]; 
+// Sample Output : -4,-3,1,2,3,5,6,7,8 
+      
+      const names = ["Karambu", "Dedan", "Muthomi", "Erick", "Eddah"];
+      console.log(names.sort());
+      
+      var priceList = [ 3, 8, 7, 6, 5, -4, 3, 2, 1];
+      priceList.sort();
+      console.log(priceList)
