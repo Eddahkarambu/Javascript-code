@@ -162,3 +162,51 @@ function emptyArray(array){
       var priceList = [ 3, 8, 7, 6, 5, -4, 3, 2, 1];
       priceList.sort();
       console.log(priceList)
+
+      // Write a JavaScript program which prints the elements of the following array. 
+      // Note : Use nested for loops. 
+      // Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]; 
+      // Sample Output : 
+
+    const input =  [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]; 
+
+
+ for (let i=0; i < input.length; i++) {
+ 
+  for (let j=0; j < input[i].length; j++) {
+ 
+    console.log(input[i][j]);
+  
+  }
+}
+
+// . There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays. 
+// Sample array : 
+// array1 = [1,0,2,3,4]; 
+// array2 = [3,5,6,7,8,13]; 
+// Expected Output : 
+// [4, 5, 8, 10, 12, 13] 
+
+
+function arrays (arr1, arr2) {
+  var resultSum = [];
+  var arrlength ;
+  if (arr1.length > arr2.length) {
+  arrlength = arr1;
+  } else {
+  arrlength = arr2;
+  }
+  
+  for (var i = 0; i < arrlength.length; i++) {
+  if (arr1[i] == undefined) {
+  arr1[i] = 0;
+  } else if (arr2[i] == undefined) {
+  arr2[i] = 0;
+  }
+  
+  resultSum.push(arr1[i] + arr2[i]);
+  
+  }
+  return resultSum;
+  }
+  console.log(arrays([1,0,2,3,4], [3,5,6,7,8,13]));
