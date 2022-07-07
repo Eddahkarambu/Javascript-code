@@ -189,15 +189,15 @@ function emptyArray(array){
 
 
 function arrays (arr1, arr2) {
-  var resultSum = [];
-  var arrlength ;
+  let resultSum = [];
+  let arrlength ;
   if (arr1.length > arr2.length) {
   arrlength = arr1;
   } else {
   arrlength = arr2;
   }
   
-  for (var i = 0; i < arrlength.length; i++) {
+  for (let i = 0; i < arrlength.length; i++) {
   if (arr1[i] == undefined) {
   arr1[i] = 0;
   } else if (arr2[i] == undefined) {
